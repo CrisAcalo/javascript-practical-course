@@ -7,9 +7,48 @@
     <title>Cálculo figuras geométricas</title>
 </head>
 <body>
-    <h1>
-        Figuras geométricas
-    </h1>
+    <header>
+        <h1>Calculadora de figuras</h1>
+    </header>
+    <main>
+        <section>
+            <section class="calculoCuadrado">
+                <form action="">
+                    <label for="inputCuadrado">
+                        <span>Lado del cuadrado</span>
+                        <input type="number" id="inputCuadrado">    
+                    </label>
+                </form>
+                    <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
+                    <button type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
+            </section>
+            <section class="calculoTriangulo">
+                <form action="">
+                    <label for="inputTrianguloLado1">
+                        <span>Lado 1 del Triangulo</span>
+                        <input type="number" id="inputTrianguloLado1">    
+                    </label>
+                    <label for="inputTrianguloLado2">
+                        <span>Lado 2 del Triangulo</span>
+                        <input type="number" id="inputTrianguloLado2">    
+                    </label>
+                    <label for="inputTrianguloBase">
+                        <span>Base del Triangulo</span>
+                        <input type="number" id="inputTrianguloBase">    
+                    </label>
+                    <label for="inputTrianguloAltura">
+                        <span>Altura del Triangulo</span>
+                        <input type="number" id="inputTrianguloAltura">    
+                    </label>
+                </form>
+                    <button type="button" onclick="calcularPerimetroTriangulo()">Calcular el perímetro</button>
+                    <button type="button" onclick="calcularAreaTriangulo()">Calcular el área</button>
+            </section>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
     <script src="./figuras.js"></script>
 </body>
 </html>

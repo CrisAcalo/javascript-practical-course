@@ -1,68 +1,116 @@
 //Código del cuadrado
 console.group("Cuadrados");
-const ladoCuadrado = 5;
-console.log("Los lados del cuadrado miden: " + ladoCuadrado + "cm");
 
-const perimetroCuadrado = ladoCuadrado * 4;
-console.log("El perímetro del cuadrado es: " + perimetroCuadrado + "cm");
+function perimetroCuadrado(lado) {
+    return lado * 4;
+}
 
-const areaCuadrado = ladoCuadrado * ladoCuadrado;
-console.log("El área del cuadrado es: " + areaCuadrado + "cm^2");
+function areaCuadrado(lado) {
+    return lado ** 2;
+}
 console.groupEnd();
 
 //Código del triángulo
 console.group("Triángulos");
 
-const ladoTriangulo1 = 6;
-const ladoTriangulo2 = 6;
-const baseTriangulo = 4;
+function perimetroTriangulo(lado1, lado2, base) {
+    return lado1 + lado2 + base;
+}
 
-console.log(
-    "Los lados del triángulo miden: "
-     + ladoTriangulo1 
-     + "cm, " 
-     + ladoTriangulo2 
-     + "cm, " 
-     + baseTriangulo 
-     + "cm"
-);
+function areaTriangulo(base, altura) {
+    return (base * altura) / 2;
+}
 
-const alturaTriangulo = 5.5;
-
-console.log("La altura del triángulo es: " + alturaTriangulo + "cm");
-
-const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
-
-console.log("El perímetro del triángulo es: " + perimetroTriangulo + "cm");
-
-const areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
-
-console.log("El área del triángulo es: " + areaTriangulo + "cm^2");
+function alturaTrianguloIsosceles(lado1, base) {
+    return Math.sqrt((lado1 ** 2) - (base ** 2) / 4)
+}
 
 console.groupEnd();
 
 //Código del circulo
 console.group("Círculo");
 
-//Radio
-const radioCirculo = 4;
-console.log("El radio del circulo es: " + radioCirculo + "cm");
-
-
 //Diámetro
-const diametroCirculo = radioCirculo * 2;
-console.log("El diámetro del circulo es: " + diametroCirculo + "cm");
+function diametroCirculo(radio) {
+    return radio * 2;
+}
 
 //Pi
 const PI =  Math.PI;
 console.log("El de PI es es: " + PI);
 
 //Circunferencia
-const perimetroCirculo = diametroCirculo * PI;
-console.log("El perímetro del circulo es: " + perimetroCirculo + "cm");
+function perimetroCirculo(radio) {
+    const diametro = diametroCirculo(radio);
+    return diametro * PI;
+}
+perimetroCirculo();
 
 // Área
-const areaCirculo = (radioCirculo ** 2) * PI;
-console.log("El área del circulo es: " + areaCirculo + "cm^2");
+function areaCirculo(radio) {
+    return (radio ** 2) * PI;
+};
+areaCirculo();
+
 
 console.groupEnd();
+
+
+//Interacción con HTML
+
+    //Cuadrado
+function calcularPerimetroCuadrado() {
+    const input = document.getElementById("inputCuadrado");
+    const value = input.value;
+
+    const perimetro = perimetroCuadrado(value);
+    alert(perimetro);
+}
+
+function calcularAreaCuadrado() {
+    const input = document.getElementById("inputCuadrado");
+    const value = input.value;
+
+    const area = areaCuadrado(value);
+    alert(area);
+}
+
+    //Triángulo
+function calcularPerimetroTriangulo() {
+    const inputLado1 = document.getElementById("inputTrianguloLado1");
+    const valueLado1 = inputLado1.value * 1;
+
+    const inputLado2 = document.getElementById("inputTrianguloLado2");
+    const valueLado2 = inputLado2.value * 1;
+
+    const inputBase = document.getElementById("inputTrianguloBase");
+    const valueBase = inputBase.value * 1;
+
+    const perimetro = perimetroTriangulo(valueLado1, valueLado2, valueBase);
+    alert(perimetro);
+}
+
+function calcularAreaTriangulo() {
+
+    const inputLado1 = document.getElementById("inputTrianguloLado1");
+    const valueLado1 = Number(inputLado1.value);
+
+    const inputLado2 = document.getElementById("inputTrianguloLado2");
+    const valueLado2 = Number(inputLado2.value);
+
+    const inputBase = document.getElementById("inputTrianguloBase");
+    const valueBase = Number(inputBase.value);
+
+    const inputAltura = document.getElementById("inputTrianguloAltura");
+    const valueAltura = Number(inputAltura.value);
+
+    if(valueLado1 === valueLado2 && valueLado1 != valueBase && valueLado1 + valueLado2 != 0) {
+        const altura = alturaTrianguloIsosceles(valueLado1, valueBase);
+
+        const area = areaTriangulo(valueBase, altura);
+        alert("Se trata de un triángulo Isóseles y su área es: " + area);
+    }else{
+        const area = areaTriangulo(valueBase, valueAltura);
+        alert("El área de tu triángulo es de: " + area);
+    };
+}
