@@ -1,3 +1,7 @@
+body {
+    position: static;
+}
+
 .title_header h1 {
     font-size: 6.5rem;
 }

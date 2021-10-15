@@ -15,7 +15,9 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column; */
-    background: #F9B208;
+    background: #ffffff;
+    position: relative;
+    min-height: 705px;
 }
 
 input {
@@ -32,7 +34,7 @@ input {
     padding: 20px 20px 0;
     font-size: 4rem;
     text-align: center;
-    color: #000000;
+    color: #0099ff;
 }
 
 .calculadora_container {
@@ -60,9 +62,24 @@ input {
     margin: 10px 10px;
     padding: 10px 0;
     border-radius: 40px;
-    background: #F9B208;
-    box-shadow:  5px 5px 10px #de9e07,
-             -5px -5px 10px #ffc609;
+}
+
+.calculoCuadrado {
+    background: #f9b108;
+    box-shadow:  3px 3px 1px #b88206,
+             -3px -3px 1px #ffcf2f;
+}
+
+.calculoCirculo {
+    background: #ff2424;
+    box-shadow:  3px 3px 1px #660e0e,
+             -3px -3px 1px #ff4747;
+}
+
+.calculoTriangulo {
+    background: #0099ff;
+    box-shadow:  3px 3px 1px #003d66,
+                 -3px -3px 1px #00f5ff;
 }
 
 .calculadora_form {
@@ -105,26 +122,48 @@ input {
 
 .button_container button {
     font-size: 1.5rem;
+    height: 35px;
     border: none;
     border-radius: 50px;
     margin: 5px;
-    padding: 3px;
-    background: #F9B208;
-    box-shadow:  5px 5px 10px #de9e07,
-             -5px -5px 10px #ffc609;
+    padding: 0 4px;
     color: #000000
+}
+
+.calculoCuadrado button {
+    background: #f9b108;
+    box-shadow:  5px 5px 10px #c28a08,
+             -5px -5px 10px #fdcc2dd7;
+}
+
+.calculoCirculo button {
+    background: #ff2424;
+    box-shadow:  5px 5px 10px #660e0e,
+             -5px -5px 10px #ff3a3a;
+}
+
+.calculoTriangulo button {
+    background: #0099ff;
+    box-shadow:  5px 5px 10px #003d66,
+                 -5px -5px 10px #00f7ff8a;
 }
 
 footer {
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: -50px;
 }
 
 footer p {
     font-size: 1.5rem;
-    display: block;
     position: absolute;
     left: calc(50% - 130px);
-    padding: 10px;
+    bottom: 0;
+    padding: 0 10px 10px;
+}
+
+.wave_footer {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
 }
