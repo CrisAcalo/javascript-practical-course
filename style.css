@@ -98,7 +98,7 @@ input {
 }
 
 .calculadora_form > label input {
-    width: 50%;
+    width: 70%;
     height: 25px;
     margin: 5px 0;
     border-radius: 50px;
