@@ -4,26 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cálculo figuras geométricas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="desktop.css" media="(min-width: 620px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/603/603563.png">
+    <title>Figure Calculator</title>
 </head>
 <body>
     <header>
-        <h1>Calculadora de figuras</h1>
+        <div class="title_header">
+            <h1>Figure Calculator</h1>
+            <!-- <span></span> -->
+        </div>
     </header>
     <main>
-        <section>
+        <section class="calculadora_container">
             <section class="calculoCuadrado">
-                <form action="">
+                <img src="https://svgsilh.com/svg/422371.svg" alt="imagen de un cuadrado">
+                <form action="" class="calculadora_form">
                     <label for="inputCuadrado">
                         <span>Lado del cuadrado</span>
                         <input type="number" id="inputCuadrado">    
                     </label>
                 </form>
+                <div class="button_container">
                     <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
                     <button type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
+                </div>
+            </section>
+            <section class="calculoCirculo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Circulo-white.svg/1024px-Circulo-white.svg.png" alt="imagen de un círculo">
+
+                <form action="" class="calculadora_form">
+                    <label for="inputCirculoRadio">
+                        <span>Radio de la circunferencia</span>
+                        <input type="number" id="inputCirculoRadio">    
+                    </label>
+                </form>
+                <div class="button_container">
+                    <button type="button" onclick="calcularCirculo()">Calcular</button>
+                    <!-- <button type="button" onclick="calcularAreaCirculo()">Calcular el área</button> -->
+                </div>
             </section>
             <section class="calculoTriangulo">
-                <form action="">
+                <img src="https://images.vexels.com/media/users/3/158599/isolated/lists/0fbc706e9e6f6c0c56e11ab4525af2aa-triangulo-isosceles-silueta-en-angulo-agudo.png" alt="imagen de un triángulo">
+                <form action="" class="calculadora_form">
                     <label for="inputTrianguloLado1">
                         <span>Lado 1 del Triangulo</span>
                         <input type="number" id="inputTrianguloLado1">    
@@ -41,8 +68,10 @@
                         <input type="number" id="inputTrianguloAltura">    
                     </label>
                 </form>
+                <div class="button_container">
                     <button type="button" onclick="calcularPerimetroTriangulo()">Calcular el perímetro</button>
                     <button type="button" onclick="calcularAreaTriangulo()">Calcular el área</button>
+                </div>
             </section>
         </section>
     </main>

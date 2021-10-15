@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    /* height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+    background: #F9B208;
+}
+
+input {
+    border-style: none;
+    text-align: center;
+    outline: none;
+}
+
+.title_header {
+    width: 100%;
+}
+
+.title_header h1 {
+    padding: 20px 20px 0;
+    font-size: 4rem;
+    text-align: center;
+    color: #000000;
+}
+
+.title_header span {
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: relative;
+    left: calc(50% - 25px);
+    background: url(https://www.svgrepo.com/show/261409/triangular-geometric.svg) center/cover no-repeat;
+}
+
+.calculadora_container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.calculadora_container img {
+    height: 100px;
+    margin: 15px 0;
+}
+
+.calculadora_container > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 300px;
+    height: max-content;
+    margin: 10px 10px;
+    padding: 10px 0;
+    border-radius: 40px;
+    background: #F9B208;
+    box-shadow:  5px 5px 10px #de9e07,
+             -5px -5px 10px #ffc609;
+}
+
+.calculadora_form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.calculadora_form > label {
+    width: 100%;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 0;
+    font-size: 1.5rem;
+}
+
+.calculadora_form > label span {
+    font-size: 1.7rem;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.calculadora_form > label input {
+    width: 50%;
+    height: 25px;
+    margin: 5px 0;
+    border-radius: 50px;
+    border-bottom: 1px solid #000000;
+    background: #00000000;
+}
+
+.button_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button_container button {
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50px;
+    margin: 5px;
+    padding: 3px;
+    background: #F9B208;
+    box-shadow:  5px 5px 10px #de9e07,
+             -5px -5px 10px #ffc609;
+    color: #000000
+}

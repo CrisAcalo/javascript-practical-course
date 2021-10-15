@@ -1,0 +1,19 @@
+.title_header h1 {
+    font-size: 6.5rem;
+}
+
+.title_header span {
+    width: 70px;
+    height: 70px;
+}
+
+.calculadora_container .calculoTriangulo {
+    width: 100%;
+    /* max-width: 640px; */
+    max-width: 520px;
+}
+
+.calculoTriangulo form label input {
+    width: 100%;
+    max-width: 160px;
+}
