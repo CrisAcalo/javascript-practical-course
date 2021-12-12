@@ -7,7 +7,25 @@
     <title>Porcentajes y Descuentos</title>
 </head>
 <body>
-    <h1>Calcula tus porcentajes y Descuentos!</h1>
+    <h1>Discount Generator</h1>
+
+    <h2>Generador de precios con descuento</h2>
+
+    <form>
+        <label for="inputPrice">
+            <span>Precio inicial</span>
+            <input id="inputPrice" type="number">
+        </label>
+        <label for="inputDiscount">
+            <span>Descuento</span>
+            <input id="inputDiscount" type="number" oninput="activeButtonPriceDiscount()">
+        </label>
+        <!-- <button type="button" onclick="activeButtonPriceDiscount()">Calcular</button> -->
+    </form>
+    <section class="result">
+        <span>Precio Final</span>
+        <p id="resultP"></p>
+    </section>
 
     <script src="./descuentos.js"></script>
 </body>
