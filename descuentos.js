@@ -7,12 +7,26 @@ function  calcularPrecioConDescuento(precio, descuento){
 }
 
 function activeButtonPriceDiscount(){
+    const coupons = ["josac", "cris", "tengoSueño"];
     const inputPrice = document.getElementById("inputPrice");
     const priceValue = inputPrice.value;
     const inputDiscount = document.getElementById("inputDiscount");
     const discountValue = inputDiscount.value;
 
-    const precioConDescuento = calcularPrecioConDescuento(priceValue, discountValue);
+    let couponDiscount;
+
+    if (!coupons.includes(discountValue)){
+        alert("El cupón que has ingresado no es válido");
+        couponDiscount = 0;
+    }else if(discountValue == coupons[0]){
+        couponDiscount = 15;
+    }else if(discountValue == coupons[1]){
+        couponDiscount = 30;
+    }else if(discountValue == coupons[2]){
+        couponDiscount = 50;
+    }
+
+    const precioConDescuento = calcularPrecioConDescuento(priceValue, couponDiscount);
 
     const resultP = document.getElementById("resultP");
     resultP.innerText = `$${precioConDescuento}`;
