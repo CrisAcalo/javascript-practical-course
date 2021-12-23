@@ -14,25 +14,40 @@ body {
     height: 100vh;
 }
 
-.form-section {
-    margin: auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1000px;
-}
-
 h1 {
     font-size: 5rem;
     text-align: center;
     padding: 20px 0;
-    font-weight: 600;
+    color: #fff;
+    font-weight: 700;
 }
 
 h2 {
     font-size: 3rem;
     text-align: center;
+    margin-bottom: 20px;
+}
+
+.principal {
+   margin: auto;
+   background: rgb(255, 255, 255); 
+   padding: 20px 0;
+   width: 90%;
+   max-width: 800px;
+   border-radius: 20px;
+   /* display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center; */
+}
+
+.form-section {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 form {
@@ -40,7 +55,8 @@ form {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 30px 15px 0 15px;
+    margin: 0 15px;
+    flex-grow: 3;
 }
 
 label {
@@ -62,25 +78,40 @@ input {
     text-align: center;
     outline: none;
     height: 30px;
-    border-radius: 12px;
     margin: 9px 0;
     background: #fff;
     width: 90%;
+    max-width: 200px;
+    border-bottom: 2px solid darkcyan;
+    border-radius: 12px;
 }
 
+input:hover {
+    background: #a5e4d349;
+}
+
+input:focus {
+    background: #a5e4d349;
+}
 
 .codigos {
-    background: rgb(255, 255, 255);
     padding: 10px;
     height: max-content;
     border-radius: 7px;
     margin: 15px;
+    flex-grow: 1;
+    text-align: center;
+    background: #a5e4d349;
 }
 
 .codigos_listas {
     display: flex;
     width: 100%;
     padding: 0 10px;
+}
+
+.codigos_listas ul:first-child {
+    text-align: left;
 }
 
 .codigos_listas ul:nth-child(2) {
@@ -117,6 +148,7 @@ button:hover {
     align-self: center;
     background: #fff;
     margin: 10px 0 0 0;
+    border-bottom: 2px solid darkcyan;
     padding: 10px 30px;
     border-radius: 15px;
 }
