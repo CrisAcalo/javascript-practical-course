@@ -5,29 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="descuentosStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
     <title>Porcentajes y Descuentos</title>
 </head>
 <body>
     <h1>Discount Generator</h1>
 
     <h2>Generador de precios con descuento</h2>
-
-    <form>
-        <label for="inputPrice">
-            <span>Precio inicial</span>
-            <input id="inputPrice" type="number">
-        </label>
-        <label for="inputDiscount">
-            <span>Código de descuento</span>
-            <input id="inputDiscount" type="text">
-        </label>
-        <button type="button" onclick="activeButtonPriceDiscount()">Calcular</button>
-    </form>
-    <section class="result">
-        <span>Precio Final</span>
-        <p id="resultP"></p>
-    </section>
-
+    <main class="principal">
+        <section class="form-section">
+            <form>
+                <label for="inputPrice">
+                    <span>Precio inicial</span>
+                    <input id="inputPrice" type="number">
+                </label>
+                <label for="inputDiscount">
+                    <span>Código de descuento</span>
+                    <input id="inputDiscount" type="text">
+                </label>
+                <button type="button" onclick="activeButtonPriceDiscount()">Calcular</button>
+            </form>
+            <section class="codigos">
+                <span>Codigos disponibles</span>
+                <div class="codigos_listas">
+                    <ul>
+                        <li>josac</li>
+                        <li>cris</li>
+                        <li>crisac</li>
+                    </ul>
+                    <ul>
+                        <li>15</li>
+                        <li>30</li>
+                        <li>40</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+        <section class="result">
+            <span>Precio Final</span>
+            <p id="resultP"></p>
+        </section>
+    </main>
     <script src="./descuentos.js"></script>
 </body>
 </html>

@@ -6,17 +6,28 @@
 
 html {
     font-size: 62.5%;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 body {
     background: #8be3cb;
+    height: 100vh;
+}
+
+.form-section {
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
 }
 
 h1 {
     font-size: 5rem;
     text-align: center;
-    margin: 20px 0;
+    padding: 20px 0;
+    font-weight: 600;
 }
 
 h2 {
@@ -29,13 +40,21 @@ form {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 30px 0;
+    margin: 30px 15px 0 15px;
 }
 
 label {
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-size: 2rem;
+    width: 100%;
+}
+
+span {
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
 input {
@@ -46,6 +65,32 @@ input {
     border-radius: 12px;
     margin: 9px 0;
     background: #fff;
+    width: 90%;
+}
+
+
+.codigos {
+    background: rgb(255, 255, 255);
+    padding: 10px;
+    height: max-content;
+    border-radius: 7px;
+    margin: 15px;
+}
+
+.codigos_listas {
+    display: flex;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.codigos_listas ul:nth-child(2) {
+    margin-left: auto;
+}
+
+li {
+    list-style: none;
+    font-size: 1.3rem;
+    padding-top: 3px;
 }
 
 button {
@@ -58,7 +103,7 @@ button {
 }
 
 button:hover {
-    background: #eee
+    background: rgb(212, 212, 212)
 }
 
 .result {

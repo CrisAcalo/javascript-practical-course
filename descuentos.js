@@ -7,7 +7,7 @@ function  calcularPrecioConDescuento(precio, descuento){
 }
 
 function activeButtonPriceDiscount(){
-    const coupons = ["josac", "cris", "tengoSueño"];
+    const coupons = ["josac", "cris", "crisac"];
     const inputPrice = document.getElementById("inputPrice");
     const priceValue = inputPrice.value;
     const inputDiscount = document.getElementById("inputDiscount");
