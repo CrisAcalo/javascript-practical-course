@@ -1,0 +1,102 @@
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto Mono', monospace;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: rgb(182,231,224);
+    background: linear-gradient(135deg, rgba(182,231,224,1) 0%, rgba(52,134,222,1) 50%, rgba(115,0,107,1) 100%);
+    background: url(https://cdn.wallpapersafari.com/61/75/Ymx59h.png) center/cover no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    text-align: center;
+    padding: 30px;
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main_content {
+    background: rgba(182, 231, 224, 0.322);
+    width: 290px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.form_section form,
+.form_section form label,
+.impresion_lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    background: rgba(1, 78, 113, 0.26);
+    border-style: none;
+    font-size: 1.8rem;
+    outline: none;
+    height: 30px;
+    width: 70%;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+span {
+    color: rgb(0, 31, 46);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+.impresion_resultado {
+    background: rgba(1, 78, 113, 0.26);
+    border-bottom: 2px solid rgb(1, 78, 113);
+    max-width: max-content;
+    height: 30px;
+    padding: 4px 30px;
+    margin: 0 0 5px 0;
+    border-radius: 10px;
+}
+
+.resultado_texto {
+    margin: 10px;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.335);
+    border-style: none;
+    font-size: 1.6rem;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 10px 0 0 0;
+}
+
+button:hover {
+    background: #b1e3e0bb;
+    color: rgb(42, 0, 70);
+}
+
+button:active {
+    background: linear-gradient(to bottom, #b1e3e063, #b1e3e0);
+}
