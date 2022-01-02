@@ -108,9 +108,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    bottom:0;
+    padding: 20px;
     width: 100%;
     min-width: 320px;
-    height: 150px;
+    height: max-content;
 }
 
 .footer--sections-container {
