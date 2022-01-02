@@ -8,6 +8,25 @@
 </head>
 <body>
     <h1>Mediana Calculator</h1>
+    <section>
+        <form action="">
+            <label for="valorAAgregar">
+                <span>Introduce un número para agregar a la lista</span>
+                <input type="number" id="valorAAgregar">
+            </label>
+        </form>
+        <button id="enviarValor" onclick="creacionListaUsuario(),impresionMediana()">Agregar</button>
+    </section>
+    <section>
+        <span>Su lista hasta el momento es:</span>
+        <p id="impresionLista"></p>
+    </section>
+    <!-- <input type="button" onclick="impresionMediana()"> -->
+    <section>
+        <span>Su mediana es:</span>
+        <p id="valorMediana"></p>
+    </section>
+
     <script src="mediana.js"></script>
 </body>
 </html>
