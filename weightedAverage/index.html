@@ -16,21 +16,18 @@
         <h1>Media Aritmetica</h1>
     </header>
     <main>
-        <div class="average_content">
+        <div class="weightedAverage_content">
             <section class="form_section">
                 <form>
-                    <label for="ValorAAgregar">
-                        <span>Introduce un número para agregar a la lista</span> 
-                        <input id="valorAAgregar" type="number">
+                    <label for="weightedAverageValues">
+                        <span>N° de materias para hacer el cálculo</span> 
+                        <input id="weightedAverageValues" type="text">
                     </label>
-                    <button id="enviarValor" type="button" onclick="generacionLista()">Agregar</button>
                 </form>
             </section>
-            <section class="impresion_lista">
-                <p class="resultado_texto">Su lista hasta el momento es:</p>
-                <p id="listaImpresa" class="impresion_resultado"></p>
-                <button id="calcularMediaAritmetica" type="button" onclick="calcularMediaAritmetica()">Calcular</button>
-                <p class="resultado_texto">La Media Aritmética de su lista es:</p>
+            <section class="impresion_ resultado">
+                <button id="calcularMediaAritmeticaPonderada" type="button" onclick="calculoMediaAritmeticaPonderada()">Calcular</button>
+                <p class="resultado_texto">La Media Aritmética Poderada es:</p>
                 <p id="resultadoMediaAritmetica" class="impresion_resultado"></p>
             </section>
         </div>

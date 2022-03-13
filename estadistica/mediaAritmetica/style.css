@@ -34,12 +34,15 @@ main {
     justify-content: center;
 }
 
-.main_content {
+.average_content,
+.weightedAverage_content {
     background: rgba(182, 231, 224, 0.322);
     width: 290px;
+    height: max-content;
     text-align: center;
     border-radius: 20px;
     padding: 10px;
+    margin: 5px;
 }
 
 .form_section form,
@@ -108,7 +111,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;
     bottom:0;
     padding: 20px;
     width: 100%;

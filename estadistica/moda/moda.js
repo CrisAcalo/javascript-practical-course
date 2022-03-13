@@ -1,12 +1,12 @@
 function calculoModa (moda) {
     listaCount = {};
-    const arrayModa = moda.split(", ");
+    const arrayModa = moda.split(",");
 
     //Convertimos el array (arrayModa) en un objeto (listaCount) que contendrá la cantidad de veces que se repiten los elementos comunes. Recorremos el array con .map()
 
     arrayModa.map(function(element){
         if (listaCount[element]) {
-            listaCount[element] += 1; //El contador aumenta según las veces que aparezca el elemento
+            listaCount[element] += 1; //Si el elemento existe el contador aumenta según las veces que aparezca el elemento
         } else { //A cada elemento nuevo se le asigna el valor de 1
             listaCount[element] = 1;
             }
