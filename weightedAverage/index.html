@@ -4,67 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="https://i1.wp.com/studfiles.net/html/2706/1204/html_MA6LpkZ5GS.TYwV/img-ZPFNQq.png">
-    <title>Promedio</title>
+    <title>Promedio Ponderado</title>
 </head>
 <body>
     <header>
-        <h1>Media Aritmetica</h1>
+        <h1>Promedio Ponderado</h1>
     </header>
     <main>
         <div class="weightedAverage_content">
             <section class="form_section">
                 <form>
-                    <label for="weightedAverageValues">
-                        <span>N° de materias para hacer el cálculo</span> 
-                        <input id="weightedAverageValues" type="text">
+                    <label for="numeroDatos">
+                        <span>N° de materias para hacer el cálculo</span>
+                        <input id="numeroDatos" type="number">
                     </label>
+                    <button type="button" onclick="aggInput()">enviar</button>
                 </form>
             </section>
-            <section class="impresion_ resultado">
-                <button id="calcularMediaAritmeticaPonderada" type="button" onclick="calculoMediaAritmeticaPonderada()">Calcular</button>
-                <p class="resultado_texto">La Media Aritmética Poderada es:</p>
-                <p id="resultadoMediaAritmetica" class="impresion_resultado"></p>
-            </section>
+            <h2 id="titlePrint"></h2>
+            <form id="aggInputs"></form>
+            <p id="weightedAveragePrint"></p>
         </div>
     </main>
-    <footer>
-        <div class="footer--sections-container">
-            <section class="footer--network">
-                <ul>
-                    <li>
-                        <a href="https://www.linkedin.com/in/cristian-jos%C3%A9-acalo-cruz-a23726210/">
-                            <span>
-                                <img src="https://cdn.svgporn.com/logos/linkedin-icon.svg" alt="Logo LinkedIn">
-                            </span>LinkedIn
-                        </a>
-                    </li>
-                    <!-- <li>
-                        <a href="https://www.instagram.com/">
-                            <span>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Logo crunchbase">
-                            </span>Instagram
-                        </a>
-                    </li> -->
-                    <li>
-                        <a href="https://github.com/MrJosac">
-                            <span>
-                                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="logo">
-                            </span>GitHub
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <section class="footer--logo">
-                <!-- <img src="https://i.ibb.co/8x2TXZd/logo-footer.png" alt="Logo de Batatabit 2020"> -->
-                <p>Desarrollado por CrisAcalo</p>
-            </section>
-        </div>
-    </footer>
-    <script src="./promedio.js"></script>
+    <script src="./weightedAverage.js"></script>
 </body>
 </html>
