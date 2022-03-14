@@ -41,10 +41,15 @@ function calcWeightedAverage() {
         return sum + newVal;
     })
 
-    const resultWeightedAverage = sumOfNotesWithCredits / sumOfCredits;
+    const resultWeightedAverage = (sumOfNotesWithCredits / sumOfCredits).toFixed(2);
     //Imprimimos el resultado
     const weightedAveragePrint = document.getElementById("weightedAveragePrint");
-    weightedAveragePrint.innerText = "El promedio es: " + resultWeightedAverage;
+    weightedAveragePrint.innerText = "Tu ponderación es: " + resultWeightedAverage;
+}
+
+function numeroDatos() {
+    let valorNumeroDatos =  parseInt(document.getElementById("numeroDatos").value);
+    return valorNumeroDatos
 }
 
 function aggInput () {
@@ -60,7 +65,7 @@ function aggInput () {
     weightedAveragePrint.innerText = "";
 
     //colocar los imput dichos por el usuario
-    let valorNumeroDatos =  parseInt(document.getElementById("numeroDatos").value);
+    let valorNumeroDatos =  numeroDatos();
 
     //Ciclo para dar nombres diferentes a los id's de los inputs en HTML
    for(let i = 1; i < (valorNumeroDatos + 1); i++ ) {
@@ -68,12 +73,23 @@ function aggInput () {
         let formTitle = document.getElementById("titlePrint");
         formTitle.innerHTML = "Ingrese sus datos"
 
-        var coursesForm = '<div class = "courses"><label for="materia' + i + '"><span>Materia</span><input type="text" id="materia' + i + '"></label><label for="notaMateria' + i + '"><span>Nota</span><input type="number" id="notaMateria' + i + '"></label><label for="creditoMateria' + i + '"><span>Credito</span><input type="number" id="creditoMateria' + i + '"></label></div>';
+        var coursesForm = '<div class = "courses"><label for="materia' + i + '"><span>Materia</span><input type="text" id="materia' + i + '" autocomplete="off"></label><label for="notaMateria' + i + '"><span>Nota</span><input type="number" id="notaMateria' + i + '"></label><label for="creditoMateria' + i + '"><span>Credito</span><input type="number" id="creditoMateria' + i + '"></label></div>';
 
         let inputs = document.getElementById("aggInputs");
         inputs.insertAdjacentHTML('beforeend', coursesForm);
 
     }
     let button = document.getElementById("aggInputs");
-    button.insertAdjacentHTML('beforeend', '<button type="button" onclick="calcWeightedAverage()">Calcular</button>');
+}
+
+function resultStyle() {
+    document.getElementById("weightedAveragePrint").style.display = "block";
+}
+
+function weightAverageCalcButtonStyle() {
+    document.getElementById("weightAverageCalcButton").style.display = "block";
+}
+
+function footerStyle() {
+    document.getElementById("footer--sections-container").style.position = "relative";
 }
