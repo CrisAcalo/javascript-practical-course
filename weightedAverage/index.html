@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;700&display=swap" rel="stylesheet">
@@ -20,17 +20,53 @@
             <section class="form_section">
                 <form>
                     <label for="numeroDatos">
-                        <span>N° de materias para hacer el cálculo</span>
+                        <span>N° de materias a Calcular</span>
                         <input id="numeroDatos" type="number">
                     </label>
-                    <button type="button" onclick="aggInput()">enviar</button>
+                    <button type="button" onclick="aggInput(), weightAverageCalcButtonStyle(), footerStyle()">enviar</button>
                 </form>
             </section>
-            <h2 id="titlePrint"></h2>
-            <form id="aggInputs"></form>
-            <p id="weightedAveragePrint"></p>
+            <section class="userData_content">
+                <span id="titlePrint"></span>
+                <form id="aggInputs" class="aggInputs"></form>
+                <button type="button" id="weightAverageCalcButton" onclick="calcWeightedAverage(), resultStyle()" class="weightAverageCalcButton">Calcular</button>
+                <p id="weightedAveragePrint" class="weightedAveragePrint"></p>
+            </section>
         </div>
     </main>
     <script src="./weightedAverage.js"></script>
+    <footer>
+        <div class="footer--sections-container" id="footer--sections-container">
+            <section class="footer--network">
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/cristian-jos%C3%A9-acalo-cruz-a23726210/" target="_BLANK">
+                            <span>
+                                <img src="https://cdn.svgporn.com/logos/linkedin-icon.svg" alt="Logo LinkedIn">
+                            </span>LinkedIn
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://www.instagram.com/" target="_BLANK">
+                            <span>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Logo crunchbase">
+                            </span>Instagram
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="https://github.com/MrJosac" target="_BLANK">
+                            <span>
+                                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="logo">
+                            </span>GitHub
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="footer--logo">
+                <!-- <img src="#" alt="Logo"> -->
+                <p>Desarrollado por Cristian Acalo</p>
+            </section>
+        </div>
+    </footer>
 </body>
 </html>
