@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de salarios</title>
+</head>
+<body>
+    <h1>Análisis de Salarios</h1>
+    <main>
+        <section>
+            <form action="">
+                <label for="">
+                    <span>Elija un país:</span>
+                    <select name="countryOptions" id="countryOptions">
+                        <option>Ecuador</option>
+                        <option>Colombia</option>
+                        <option>Perú</option>
+                      </select>
+                </label>
+                <label for="">
+                    <p>¿Que dato desea obtener?</p>
+                    <button type="button" id="calcTotalMedianaButton" onclick="calcTotalMediana()" class="calcTotalMedianaButton">Mediana</button>
+                    <button type="button" id="weightAverageCalcButton" onclick="calcWeightedAverage(), resultStyle()" class="weightAverageCalcButton">Mediana de los 10 más pagados</button>
+                </label>
+            </form>
+        </section>
+    </main>
+
+
+    <script src="./salarios.js"></script>
+    <script src="./analisis.js"></script>
+</body>
+</html>
