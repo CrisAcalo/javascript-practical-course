@@ -20,10 +20,18 @@
                 </label>
                 <label for="">
                     <p>¿Que dato desea obtener?</p>
-                    <button type="button" id="calcTotalMedianaButton" onclick="calcTotalMediana()" class="calcTotalMedianaButton">Mediana</button>
-                    <button type="button" id="weightAverageCalcButton" onclick="calcWeightedAverage(), resultStyle()" class="weightAverageCalcButton">Mediana de los 10 más pagados</button>
+                    <button type="button" id="calcTotalMedianaButton" onclick="calcTotalMediana(), resultGeneralMediaPrinted()" class="calcTotalMedianaButton">Mediana</button>
+                    <button type="button" id="calcTotalMedianaButton2" onclick="calcTotalMediana(), resultGeneralMediaTop10Printed()" class="weightAverageCalcButton">Mediana de los 10 más pagados</button>
                 </label>
             </form>
+        </section>
+        <section>
+            <p class="generalMediaPrinted" id="generalMediaPrinted">
+                <!-- Impresion de resultado -->
+            </p>
+            <p class="top10Printed" id="top10Printed">
+
+            </p>
         </section>
     </main>
 

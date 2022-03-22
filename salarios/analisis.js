@@ -1,10 +1,19 @@
-//asignacion de valores para la ejecucion de funciones
+//asignacion de valores para el calculo de la Mediana General
 function calcTotalMediana(){
     const country = document.getElementById("countryOptions").value;
     const countrySalaryArraySorted = countryIdentrifier(country); 
-    const result = calcMedianaCases(countrySalaryArraySorted);
-    console.log(countrySalaryArraySorted)
-    console.log(result)
+    const generalMedian = calcMedianaCases(countrySalaryArraySorted);
+    const top10Median = top10Salaries(countrySalaryArraySorted);
+    const results = [generalMedian, top10Median]
+    return results;
+}
+
+//Calculo de mediana del top 10% de salarios
+function top10Salaries (salaries){
+    const startValueTop10Salaries = parseInt((salaries.length * 90)/100);
+    const top10SalariesArray = salaries.slice(startValueTop10Salaries, salaries.length)
+    const result = calcMedianaCases(top10SalariesArray);
+    return result;
 }
 
 //Identificamos que País escoge el usuario y asignamos los datos correspondientes
@@ -50,4 +59,15 @@ function average(medianArray){
     const sumOfMedianArray = medianArray.reduce((sum = 0, newVal) => sum + newVal)
     const averageMedianResult = sumOfMedianArray / medianArray.length;
     return averageMedianResult;
+}
+
+function resultGeneralMediaPrinted() {
+    const impresion = document.getElementById("generalMediaPrinted")
+    const country = document.getElementById("countryOptions").value;
+    impresion.innerHTML = 'La mediana de salarios de ' + country + ' es de: ' + calcTotalMediana()[0];
+}
+function resultGeneralMediaTop10Printed() {
+    const impresion = document.getElementById("top10Printed")
+    const country = document.getElementById("countryOptions").value;
+    impresion.innerHTML = 'La mediana del top 10% de salarios de ' + country + ' es de: ' + calcTotalMediana()[1];
 }
