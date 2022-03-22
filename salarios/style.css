@@ -1,0 +1,157 @@
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto Mono', monospace;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #000;
+}
+body {
+    background: #008fee;
+}
+
+h1 {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.form_section-content,
+.print_results-sections {
+    background: #0079ca;
+    width: 80%;
+    max-width: 800px;
+    height: max-content;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px auto;
+}
+
+.form_content,
+.form_content form label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_section input {
+    width: 200px
+}
+
+.select_country {
+    background: #0099ff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+}
+
+.select_country:active {
+    border:none;
+}
+
+.select_country:hover {
+    background: #0099ff;
+}
+
+span {
+    color: #000000;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.printedResult {
+    font-size: 1.8rem;
+    border-style: none;
+    max-width: max-content;
+    height: max-content;
+    padding: 4px 30px;
+    margin: 10px auto 0;
+    border-radius: 10px;
+}
+
+button {
+    background: #008fee;
+    border-style: none;
+    font-size: 1.6rem;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 5px auto 10px;
+}
+
+button:hover {
+    background: #0099ff;
+}
+
+/* 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom:0;
+    padding: 20px;
+    width: 100%;
+    min-width: 320px;
+    height: max-content;
+} */
+
+.footer--sections-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    min-width: 320px;
+    margin: auto;
+    position: relative;
+    bottom:0;
+    padding: 20px;
+    height: max-content;
+}
+
+.footer--network a {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.footer--network li {
+    width: max-content;
+    list-style: none;
+    margin: 10px 0;
+}
+
+.footer--network img {
+    margin-right: 5px;
+    width: 20px;
+    vertical-align: text-bottom;
+}
+
+.footer--logo {
+    text-align: center;
+    padding: 0 10px;
+}
+
+.footer--logo img {
+    width: 64px;
+    height: 50px;
+}
+
+.footer--sections-container p {
+    font-size: 1.5rem;
+}

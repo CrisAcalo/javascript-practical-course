@@ -3,38 +3,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Análisis de salarios</title>
 </head>
 <body>
     <h1>Análisis de Salarios</h1>
     <main>
-        <section>
-            <form action="">
-                <label for="">
+        <section class="form_section-content">
+            <form class="form_content">
+                <label for="countryOptions">
                     <span>Elija un país:</span>
-                    <select name="countryOptions" id="countryOptions">
+                    <select name="countryOptions" id="countryOptions" class="select_country">
                         <option>Ecuador</option>
                         <option>Colombia</option>
                         <option>Perú</option>
                       </select>
                 </label>
-                <label for="">
                     <p>¿Que dato desea obtener?</p>
                     <button type="button" id="calcTotalMedianaButton" onclick="calcTotalMediana(), resultGeneralMediaPrinted()" class="calcTotalMedianaButton">Mediana</button>
                     <button type="button" id="calcTotalMedianaButton2" onclick="calcTotalMediana(), resultGeneralMediaTop10Printed()" class="weightAverageCalcButton">Mediana de los 10 más pagados</button>
-                </label>
             </form>
         </section>
-        <section>
-            <p class="generalMediaPrinted" id="generalMediaPrinted">
+        <section class="print_results-sections">
+            <p class="printedResult" id="generalMediaPrinted">
                 <!-- Impresion de resultado -->
             </p>
-            <p class="top10Printed" id="top10Printed">
-
+            <p class="printedResult" id="top10Printed">
+                <!-- Impresion de resultado -->
             </p>
         </section>
     </main>
-
+    <footer>
+        <div class="footer--sections-container" id="footer--sections-container">
+            <section class="footer--network">
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/cristian-jos%C3%A9-acalo-cruz-a23726210/" target="_BLANK">
+                            <span>
+                                <img src="https://cdn.svgporn.com/logos/linkedin-icon.svg" alt="Logo LinkedIn">
+                            </span>LinkedIn
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://www.instagram.com/" target="_BLANK">
+                            <span>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Logo crunchbase">
+                            </span>Instagram
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="https://github.com/MrJosac" target="_BLANK">
+                            <span>
+                                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="logo">
+                            </span>GitHub
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="footer--logo">
+                <!-- <img src="#" alt="Logo"> -->
+                <p>Desarrollado por Cristian Acalo</p>
+            </section>
+        </div>
+    </footer>
 
     <script src="./salarios.js"></script>
     <script src="./analisis.js"></script>
